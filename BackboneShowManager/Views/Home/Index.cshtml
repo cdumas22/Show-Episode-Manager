@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div id="APP"></div>
+@section Scripts {
+    <script>
+        curl(["Router"]).then(function (Router) {
+             var router = new Router({
+                 el: $("#APP")
+             });
+             Backbone.history.start();
+        }, function () {
+            $("#APP").html("There was a problem loading the app");
+        });
+    </script>
+}

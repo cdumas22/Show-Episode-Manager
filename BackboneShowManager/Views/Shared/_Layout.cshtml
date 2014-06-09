@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script>
+        var curl = {
+            baseUrl: '/Scripts/App',
+            pluginPath: '/Scripts/plugins'
+        };
+    </script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/backbone")
+</head>
+<body>
+    <header>
+        <h1>Show Episode Manager</h1>
+    </header>
+    <section id="content">
+        @RenderBody()
+    </section>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
